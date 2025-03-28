@@ -1,0 +1,230 @@
+/* นำเข้า font */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+  font-family: 'Itim', cursive;
+  background-color: #FFFFFF;
+  color: #7A4A22;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #F4A825;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* โลโก้ */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* เมนู */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  display: inline;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #D9A066;
+}
+
+/* เมนูมือถือ */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background: #F4A825;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1024px;
+  margin: 80px auto 20px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #F4A825;
+  margin-bottom: 10px;
+}
+
+/* Grid Layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+/* การ์ด */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ปุ่มกด */
+.card button {
+  background: #D9A066;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  background: #7A4A22;
+}
+
+/* Menu Container */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Menu Card */
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Menu Image */
+.menu-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Menu Info */
+.menu-info {
+  margin-top: 10px;
+}
+
+/* ปุ่มกด */
+.add-to-cart-btn {
+  background: #F4A825;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #7A4A22;
+}
+
+.cart-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 520px;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #7A4A22;
+  margin-bottom: 10px;
+}
